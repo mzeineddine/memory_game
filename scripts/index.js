@@ -21,6 +21,9 @@ function userInput(event){
             i++;
         }else{
             prompt.innerHTML = "You lose";
+            for(let i = 0; i < color.length; i++){
+                color[i].removeEventListener("click", userInput);
+            }
             //Wait 3 sec and the wait for a keydown or click
             setTimeout(() => {
                 prompt.innerHTML = "Click any key on keyboard to start again";
