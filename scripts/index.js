@@ -17,6 +17,7 @@ function userInput(event){
     setTimeout(() => {
         event.target.classList.remove("select");
         user_colors.push(event.target);
+        console.log("user:"+user_colors);
         if(computer_colors[i]==user_colors[i]){
             i++;
         }else{
@@ -70,6 +71,7 @@ function generate_computer_color(){
 
 function start(){
     computer_colors = [];
+    user_colors = [];
     document.removeEventListener('keydown', start);
     for(let i = 0; i < color.length; i++){
         color[i].removeEventListener("click", start);
