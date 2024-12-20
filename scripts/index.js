@@ -65,6 +65,7 @@ function generate_computer_color(){
 }
 
 function start(){
+    computer_colors = [];
     document.removeEventListener('keydown', start);
     for(let i = 0; i < color.length; i++){
         color[i].removeEventListener("click", start);
